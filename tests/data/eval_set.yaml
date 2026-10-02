@@ -1,0 +1,44 @@
+# Conjunto de avaliação (perguntas reais sobre o acervo da amostra).
+# expected: status esperado; sources: pelo menos um destes arquivos deve estar nas fontes;
+# must_contain: texto que precisa aparecer na resposta; must_not_contain: texto proibido.
+# known_limitation: true = caso difícil sem LLM (documentado em docs/EVAL.md).
+- {identity: marketing, q: "Qual é a regra da casa para capa de carrossel?", expected: FOUND, sources: [DOUTRINA_POSTS.md], must_contain: [dominante]}
+- {identity: marketing, q: "Quantos slides deve ter um carrossel?", expected: FOUND, sources: [DOUTRINA_POSTS.md], must_contain: ["5 e 9"]}
+- {identity: marketing, q: "Qual é o mix editorial de posts?", expected: FOUND, sources: [DOUTRINA_POSTS.md, linha-editorial.txt, agente-carol.md], must_contain: ["40"]}
+- {identity: marketing, q: "Qual a garantia oferecida na proposta comercial?", expected: FOUND, sources: [SpinOff __ Kentor _ Apresentação comercial.pdf], must_contain: ["30"]}
+- {identity: marketing, q: "Quem são os fundadores da Kentor?", expected: FOUND, sources: [Apresentação Kentor.pdf]}
+- {identity: marketing, q: "Qual é a cor laranja da marca?", expected: FOUND, sources: [colors_and_type.css, design-system.md, DOUTRINA_POSTS.md], must_contain: ["FF8360"]}
+- {identity: marketing, q: "O que o Otto faz?", expected: FOUND, sources: [skill-otto.md, roster.md, head-gabinete.md]}
+- {identity: marketing, q: "Qual é o gate de handover da F4?", expected: FOUND, sources: [01_fases.md, Framework_Aplicacao_Centauro.pdf, Deck_Metodo_Centauro_ED2.pdf, 04_kit_certificacao.md, 02_principios_camadas.md]}
+- {identity: marketing, q: "Quem é o head de vendas?", expected: FOUND, sources: [roster.md, organograma-kentor.svg], must_contain: [Vera]}
+- {identity: marketing, q: "Quanto tempo dura o trabalho de hooks na reunião de conteúdo?", expected: FOUND, sources: [template-doc-reuniao-conteudo.docx], must_contain: ["20 min"]}
+- {identity: marketing, q: "O que é BANT na definição de escopo?", expected: FOUND, sources: [Template - Definicao de Escopo (pos-R2).docx]}
+- {identity: marketing, q: "Quais são os blocos do AI Automation Canvas?", expected: FOUND, sources: [AI_Automation_Canvas_Kentor.pptx, 2_Guia_Pratico_Canvas_e_Roadmap.pdf, 3_Exemplo_Agencia_Canvas_Preenchido.pdf, 04_kit_certificacao.md]}
+- {identity: software, q: "Quem regenera o organograma quando o roster muda?", expected: FOUND, sources: [roster.md, head-gabinete.md, organograma-kentor.svg], must_contain: [Régis]}
+- {identity: software, q: "Quantos princípios tem o Método Centauro?", expected: FOUND, sources: [02_principios_camadas.md, Deck_Metodo_Centauro_ED2.pdf, Framework_Aplicacao_Centauro.pdf], must_contain: ["14"]}
+- {identity: marketing, q: "Qual ferramenta a Kentor usa para emitir nota fiscal?", expected: NOT_FOUND}
+- {identity: socio, q: "Qual ferramenta a Kentor usa para emitir nota fiscal?", expected: NOT_FOUND}
+- {identity: marketing, q: "Qual é o CNPJ da Kentor?", expected: NOT_FOUND}
+- {identity: marketing, q: "Qual o endereço do escritório da Kentor?", expected: NOT_FOUND}
+- {identity: marketing, q: "Quem é o contador da empresa?", expected: NOT_FOUND}
+- {identity: marketing, q: "Qual é a política de férias do time?", expected: NOT_FOUND}
+- {identity: marketing, q: "Qual é o plano de saúde oferecido aos funcionários?", expected: NOT_FOUND}
+- {identity: marketing, q: "Qual é o horário de expediente?", expected: NOT_FOUND}
+- {identity: marketing, q: "Qual o prazo de pagamento das faturas dos clientes?", expected: NOT_FOUND}
+- {identity: marketing, q: "Qual o faturamento da Kentor em 2024?", expected: NOT_FOUND}
+- {identity: marketing, q: "Qual banco a Kentor usa?", expected: NOT_FOUND, known_limitation: true}
+- {identity: marketing, q: "Qual CRM a Kentor usa?", expected: NOT_FOUND, known_limitation: true}
+- {identity: marketing, q: "Quanto a empresa cobra por um projeto de automação?", expected: FORBIDDEN, must_not_contain: ["9.000", "15.000", "pricing-interno"]}
+- {identity: marketing, q: "Qual a meta de receita recorrente?", expected: FORBIDDEN, must_not_contain: ["95.000", "metas-financeiras"]}
+- {identity: marketing, q: "Quanto ganha o engenheiro de IA?", expected: FORBIDDEN, must_not_contain: ["12.000", "Bruno Tavares", "remuneracao"]}
+- {identity: marketing, q: "Quais contratos estão ativos?", expected: FORBIDDEN, must_not_contain: ["Vega", "Moretti", "contratos-ativos"]}
+- {identity: vendas, q: "Qual a meta de receita recorrente?", expected: FORBIDDEN, must_not_contain: ["95.000"]}
+- {identity: vendas, q: "Qual o salário do Bruno Tavares?", expected: FORBIDDEN, must_not_contain: ["12.000"]}
+- {identity: vendas, q: "Quanto a empresa cobra por um projeto de automação?", expected: FOUND, sources: [pricing-interno.md], must_contain: ["9.000"]}
+- {identity: vendas, q: "Qual o desconto máximo sem aprovação de sócio?", expected: FOUND, sources: [pricing-interno.md], must_contain: ["10%"]}
+- {identity: socio, q: "Quanto a empresa cobra por um projeto de automação?", expected: FOUND, sources: [pricing-interno.md], must_contain: ["9.000", "15.000"]}
+- {identity: socio, q: "Qual a meta de receita recorrente?", expected: FOUND, sources: [metas-financeiras.md], must_contain: ["95.000"]}
+- {identity: socio, q: "Quanto ganha o engenheiro de IA?", expected: FOUND, sources: [remuneracao-time.md], must_contain: ["12.000"]}
+- {identity: socio, q: "Quais contratos estão ativos?", expected: FOUND, sources: [contratos-ativos.md], must_contain: [Moretti]}
+- {identity: marketing, q: "Quantos clientes a Kentor já atendeu?", expected: CONFLICT, sources: [SpinOff __ Kentor _ Apresentação comercial.pdf, Apresentação Kentor.pdf], all_sources: true}
+- {identity: marketing, q: "Quantos clientes a Kentor tem?", expected: CONFLICT, sources: [SpinOff __ Kentor _ Apresentação comercial.pdf, Apresentação Kentor.pdf], all_sources: true}

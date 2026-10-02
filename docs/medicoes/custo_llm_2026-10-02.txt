@@ -1,0 +1,45 @@
+# Saída de scripts/measure_llm_cost.py — Windows do autor, 02/10/2026, google/gemini-2.5-flash-lite via OpenRouter
+
+FOUND        1377 ms  [marketing] Qual é a regra da casa para capa de carrossel?
+FOUND        1441 ms  [marketing] Quantos slides deve ter um carrossel?
+FOUND        1914 ms  [marketing] Qual é o mix editorial de posts?
+FOUND        1004 ms  [marketing] Qual a garantia oferecida na proposta comercial?
+FOUND        1236 ms  [marketing] Quem são os fundadores da Kentor?
+FOUND        1133 ms  [marketing] Qual é a cor laranja da marca?
+FOUND        1414 ms  [marketing] O que o Otto faz?
+FOUND        2669 ms  [marketing] Qual é o gate de handover da F4?
+FOUND        1340 ms  [marketing] Quem é o head de vendas?
+FOUND        1108 ms  [marketing] Quanto tempo dura o trabalho de hooks na reunião de conteúdo?
+FOUND         947 ms  [marketing] O que é BANT na definição de escopo?
+FOUND        1218 ms  [marketing] Quais são os blocos do AI Automation Canvas?
+FOUND         925 ms  [software] Quem regenera o organograma quando o roster muda?
+FOUND        1322 ms  [software] Quantos princípios tem o Método Centauro?
+NOT_FOUND       8 ms  [marketing] Qual ferramenta a Kentor usa para emitir nota fiscal?
+NOT_FOUND       7 ms  [socio] Qual ferramenta a Kentor usa para emitir nota fiscal?
+NOT_FOUND       6 ms  [marketing] Qual é o CNPJ da Kentor?
+NOT_FOUND       7 ms  [marketing] Qual o endereço do escritório da Kentor?
+NOT_FOUND       5 ms  [marketing] Quem é o contador da empresa?
+NOT_FOUND       5 ms  [marketing] Qual é a política de férias do time?
+NOT_FOUND       8 ms  [marketing] Qual é o plano de saúde oferecido aos funcionários?
+NOT_FOUND       5 ms  [marketing] Qual é o horário de expediente?
+NOT_FOUND       6 ms  [marketing] Qual o prazo de pagamento das faturas dos clientes?
+NOT_FOUND       7 ms  [marketing] Qual o faturamento da Kentor em 2024?
+NOT_FOUND     902 ms  [marketing] Qual banco a Kentor usa?
+FOUND        1250 ms  [marketing] Qual CRM a Kentor usa?
+FORBIDDEN      12 ms  [marketing] Quanto a empresa cobra por um projeto de automação?
+FORBIDDEN       6 ms  [marketing] Qual a meta de receita recorrente?
+FORBIDDEN       6 ms  [marketing] Quanto ganha o engenheiro de IA?
+FORBIDDEN       8 ms  [marketing] Quais contratos estão ativos?
+FORBIDDEN      10 ms  [vendas] Qual a meta de receita recorrente?
+FORBIDDEN      10 ms  [vendas] Qual o salário do Bruno Tavares?
+FOUND        1142 ms  [vendas] Quanto a empresa cobra por um projeto de automação?
+FOUND         774 ms  [vendas] Qual o desconto máximo sem aprovação de sócio?
+FOUND        1155 ms  [socio] Quanto a empresa cobra por um projeto de automação?
+FOUND         849 ms  [socio] Qual a meta de receita recorrente?
+FOUND         963 ms  [socio] Quanto ganha o engenheiro de IA?
+FOUND        1230 ms  [socio] Quais contratos estão ativos?
+CONFLICT      979 ms  [marketing] Quantos clientes a Kentor já atendeu?
+CONFLICT      935 ms  [marketing] Quantos clientes a Kentor tem?
+
+chamadas LLM: 24 · tokens entrada 21477 · saída 2534 · custo desta rodada US$ 0.00316 · latência média LLM 1125 ms
+custo acumulado registrado no banco: US$ 0.00342 · saldo estimado do orçamento: US$ 4.9966

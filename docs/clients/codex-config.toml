@@ -1,0 +1,13 @@
+# Trecho para ~/.codex/config.toml (Codex CLI).
+# Troque /CAMINHO/kentor-memoria pelo caminho absoluto do repositório.
+# Windows: command = 'C:\CAMINHO\kentor-memoria\.venv\Scripts\python.exe'
+
+[mcp_servers.kentor-socio]
+command = "/CAMINHO/kentor-memoria/.venv/bin/python"
+args = ["-m", "kentor_memoria.mcp_server"]
+env = { KENTOR_IDENTITY = "socio" }
+
+[mcp_servers.kentor-marketing]
+command = "/CAMINHO/kentor-memoria/.venv/bin/python"
+args = ["-m", "kentor_memoria.mcp_server"]
+env = { KENTOR_IDENTITY = "marketing" }

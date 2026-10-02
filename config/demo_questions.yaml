@@ -1,0 +1,39 @@
+# Perguntas da "demonstração guiada" da interface gráfica.
+# Todas são perguntas REAIS do conjunto de avaliação (tests/data/eval_set.yaml) —
+# um teste garante isso (tests/test_ui_bridge.py). `suggested_identities` é só uma
+# dica de roteiro; quem decide o resultado é sempre o backend.
+
+- label: Regra para capa de carrossel
+  question: Qual é a regra da casa para capa de carrossel?
+  hint: Resposta com fonte (DOUTRINA_POSTS.md)
+  suggested_identities: [marketing]
+
+- label: Informação inexistente
+  question: Qual ferramenta a Kentor usa para emitir nota fiscal?
+  hint: O sistema diz que não sabe, em vez de inventar
+  suggested_identities: [socio]
+
+- label: Informação restrita (preço)
+  question: Quanto a empresa cobra por um projeto de automação?
+  hint: Compare Marketing × Vendas × Sócio
+  suggested_identities: [marketing, vendas, socio]
+
+- label: Informação restrita (finanças)
+  question: Qual a meta de receita recorrente?
+  hint: Vendas não vê; Sócio vê
+  suggested_identities: [vendas, socio]
+
+- label: Exemplo de conflito
+  question: Quantos clientes a Kentor já atendeu?
+  hint: Dois PDFs dizem números diferentes
+  suggested_identities: [marketing]
+
+- label: Informação só no PDF
+  question: Qual a garantia oferecida na proposta comercial?
+  hint: Apresentação comercial em PDF, p. 34
+  suggested_identities: [marketing]
+
+- label: Informação só no Word
+  question: Quanto tempo dura o trabalho de hooks na reunião de conteúdo?
+  hint: Tabela do .docx da reunião de conteúdo
+  suggested_identities: [marketing]

@@ -1,0 +1,27 @@
+# Política de acesso por caminho (relativo à raiz do acervo).
+#
+# - levels: do menos para o mais restrito. Uma identidade com clearance X lê
+#   documentos de nível <= X.
+# - rules: a PRIMEIRA regra que casa com o caminho vence (glob estilo fnmatch).
+# - Documentos sem regra recebem default_level.
+# - Frontmatter `acesso:`/`access:` num documento só pode SUBIR o nível, nunca
+#   baixar: um arquivo dentro de 05-restrito-ficticio/ não consegue se declarar
+#   público.
+# - owner: texto mostrado a quem recebe FORBIDDEN ("quem pode responder").
+#   Nunca é conteúdo do documento — é configuração.
+
+levels: [team, commercial, restricted]
+# nomes exibidos na interface gráfica (apresentação apenas)
+level_labels: {team: Time, commercial: Comercial, restricted: Restrito}
+default_level: team
+
+rules:
+  - pattern: "05-restrito-ficticio/pricing-interno.md"
+    level: commercial
+    owner: "a área comercial (Vendas) ou um sócio"
+  - pattern: "05-restrito-ficticio/contratos-ativos.md"
+    level: commercial
+    owner: "a área comercial (Vendas) ou um sócio"
+  - pattern: "05-restrito-ficticio/*"
+    level: restricted
+    owner: "um dos sócios"

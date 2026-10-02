@@ -1,0 +1,24 @@
+# Identidades fictícias do case. Não há autenticação real (fora do escopo);
+# a identidade é fixada no processo do servidor MCP via KENTOR_IDENTITY.
+#
+# label: nome exibido na interface gráfica.
+# clearance: nível máximo de documento que a identidade pode ler.
+# Os níveis e sua ordem estão em access_policy.yaml (team < commercial < restricted).
+
+identities:
+  marketing:
+    label: Marketing
+    clearance: team
+    description: Time de marketing (conteúdo, branding).
+  software:
+    label: Software
+    clearance: team
+    description: Time de software/dev.
+  vendas:
+    label: Vendas
+    clearance: commercial
+    description: Time comercial — enxerga preços e contratos, não finanças nem remuneração.
+  socio:
+    label: Sócio
+    clearance: restricted
+    description: Sócios — enxergam todo o acervo.
